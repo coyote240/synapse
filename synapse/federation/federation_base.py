@@ -20,12 +20,7 @@ import six
 from twisted.internet import defer
 from twisted.internet.defer import DeferredList
 
-from synapse.api.constants import (
-    MAX_DEPTH,
-    EventTypes,
-    Membership,
-    RoomVersions,
-)
+from synapse.api.constants import MAX_DEPTH, EventTypes, Membership, RoomVersions
 from synapse.api.errors import Codes, SynapseError
 from synapse.crypto.event_signing import check_event_content_hash
 from synapse.events import event_type_from_format_version
@@ -33,7 +28,6 @@ from synapse.events.utils import prune_event
 from synapse.http.servlet import assert_params_in_dict
 from synapse.types import get_domain_from_id
 from synapse.util import logcontext, unwrapFirstError
-
 
 logger = logging.getLogger(__name__)
 
